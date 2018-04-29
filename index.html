@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
 		body {
 			margin: 0;
@@ -26,6 +27,19 @@
 		
 		}
 	</style>
+	<script type="text/javascript">
+		
+		var alturaDocumento = $(window).height();
+		console.log(alturaDocumento);
+
+		function AlturaSecao(){
+
+			$('.secao').height(alturaDocumento);
+		}
+
+		$(AlturaSecao);
+
+	</script>
 </head>
 <body>
 
