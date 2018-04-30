@@ -23,6 +23,7 @@
 			left: 50%;
 			margin-left: -25px;
 			cursor: pointer;
+			border-bottom: 5px solid yellow;
 		}
 
 		.scroll{
@@ -72,19 +73,7 @@
 		
 		}
 	</style>
-	<script type="text/javascript">
-		
-		var alturaDocumento = $(window).height();
-		console.log(alturaDocumento);
 
-		function AlturaSecao(){
-
-			$('.secao').height(alturaDocumento);
-		}
-
-		$(AlturaSecao);
-
-	</script>
 </head>
 <body>
 
@@ -109,6 +98,63 @@
 			<span class="scroll-top scroll"></span>
 		</span>
 	</div>
+
+
+<script type="text/javascript">
+		
+		
+
+		$(document).ready(function(){
+
+			var alturaDocumento = $(window).height();
+			
+
+			function AlturaSecao(){
+
+				$('.secao').height(alturaDocumento);
+			}
+
+			
+
+			function ScrollSecao(){
+
+				console.log('entrou');
+				var body = $('body');
+				var top = body.scrollTop();
+				console.log(top);
+				if($(this).parent('.secao').is('#secao1')){
+					console.log('estou secao1');
+					$('body,html').animate({scrollTop: alturaDocumento}, '500');
+				} else if($(this).parent('.secao').is('#secao2')){
+					$('body,html').animate({scrollTop: alturaDocumento * 2}, '500');
+					console.log('estou secao2');
+				}else if($(this).parent('.secao').is('#secao3')){
+					$('body,html').animate({scrollTop: alturaDocumento * 3}, '500');
+					console.log('estou secao2');
+				}else if($(this).parent('.secao').is('#secao4')){
+					$('body,html').animate({scrollTop: 0}, '800');
+					console.log('estou secao2');
+				}
+			}
+
+
+		
+
+		
+			/*
+			$('.icone-scroll').click(function(){
+				$('body,html').animate({scrollTop: 500},600);
+			})
+			*/
+			$('.icone-scroll').click(ScrollSecao);
+			$(AlturaSecao);
+
+
+		});
+
+		
+
+	</script>
 
 
 </body>
