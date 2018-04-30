@@ -1,7 +1,7 @@
 
 
 <strong>artigo de rolagem de pagina</strong><br>
-<p>4 divs com botoes para subir e descer os botoes com css puro</p>
+<p>4 divs com botoes para subir e descer os botoes com css puro.</p>
 
 
 <p>link do artigo</p><br>
